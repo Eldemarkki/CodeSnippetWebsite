@@ -42,7 +42,7 @@ namespace CodeSnippetWebsite.Pages.api
             return Redirect("/");
         }
 
-        [HttpPost("EditCodeSnippet")]
+        [HttpPost("edit")]
         public ActionResult EditCodeSnippet([FromForm] CodeSnippet codeSnippet)
         {
             codeSnippetService.Edit(codeSnippet.Id, codeSnippet);
