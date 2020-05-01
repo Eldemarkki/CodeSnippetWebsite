@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>d841685b-be76-4a6b-864c-1e9a45425020</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.4.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeSnippetWebsite.Models\CodeSnippetWebsite.Models.csproj" />
+    <ProjectReference Include="..\CodeSnippetWebsite.Services\CodeSnippetWebsite.Services.csproj" />
+  </ItemGroup>
+
+
+
+</Project>

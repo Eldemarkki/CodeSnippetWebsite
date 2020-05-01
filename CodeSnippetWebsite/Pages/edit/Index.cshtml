@@ -1,0 +1,37 @@
+﻿@page "{Id}"
+@model CodeSnippetWebsite.IndexModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editing @Model.Id</h1>
+
+@using (Html.BeginForm($"EditCodeSnippet", "CodeSnippet", FormMethod.Post, new
+{
+    id = "editSnippetForm",
+    @class = "mt-3 flex-column d-flex justify-content-center"
+}))
+{
+    @Html.TextBoxFor(s => s.CodeSnippet.Name, null, new
+    {
+        placeholder = "Snippet name",
+        value = Model.CodeSnippet.Name,
+        required = "required"
+    }); ;
+    <br />
+
+    @Html.HiddenFor(s => s.CodeSnippet.Id, new { 
+        value = Model.Id    
+    });
+
+    @Html.TextAreaFor(s => s.CodeSnippet.Code, new
+    {
+        placeholder = "Code",
+        rows = "10",
+        value = Model.CodeSnippet.Code,
+        required = "required"
+    });
+    <br />
+
+    <input type="submit" value="Save changes" />
+}
